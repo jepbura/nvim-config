@@ -1,5 +1,5 @@
 -- NOTE: Global Variables
-local sysname = vim.uv.os_uname().sysname
+local sysname = vim.loop.os_uname().sysname -- Replace vim.uv with vim.loop
 local os = sysname:match "Windows" and "Windows" or sysname:match "Linux" and "Linux" or sysname -- Windows, Linux, Darwin, NetBSD,...
 
 local global = {
