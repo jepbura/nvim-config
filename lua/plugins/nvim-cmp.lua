@@ -76,46 +76,6 @@ return {
       },
     },
     {
-      "NvChad/NvChad",
-      lazy = false,
-      branch = "v2.5",
-      import = "nvchad.plugins",
-    },
-    {
-      "zbirenbaum/copilot.lua",
-      cmd = "Copilot",
-      event = "InsertEnter",
-      config = function()
-        require("copilot").setup({
-          suggestion = { enabled = true },
-          panel = { enabled = true },
-        })
-      end,
-    },
-    {
-      "zbirenbaum/copilot-cmp",
-      after = { "copilot.lua", "nvim-cmp" },
-      config = function()
-        require("copilot_cmp").setup()
-      end,
-    },
-    {
-      "supermaven-inc/supermaven-nvim",
-      -- commit = "df3ecf7",
-      -- commit = "40bde487fe31723cdd180843b182f70c6a991226",
-      event = "BufReadPost",
-      enabled = false,
-      opts = {
-        disable_keymaps = false,
-        disable_inline_completion = false,
-        keymaps = {
-          accept_suggestion = "<A-f>",
-          clear_suggestion = "<Nop>",
-          accept_word = "<A-w>",
-        },
-      },
-    },
-    {
       "L3MON4D3/LuaSnip",
       dependencies = "rafamadriz/friendly-snippets",
       build = "make install_jsregexp",
